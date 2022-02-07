@@ -1,0 +1,62 @@
+<div class="container">
+  <h1>Our quotes </h1>
+  <hr>
+
+  <div class="row p-4 ">
+    <div class="col-md-12 ">
+      <div *ngFor='let quote of quotes;let i = index'>
+
+        <div class="col-md-6"> <i class="fa fa-quote-left" aria-hidden="true"></i>
+          <h4> {{quote.name}}</h4> <i class="fa fa-quote-right" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-6"><br><br>
+          <p> please remember to rate our quotes down bellow <i class="fa fa-smile-o" aria-hidden="true"></i></p>
+        </div>
+        <button (click)='toggleDetails(i)' class="btn btn-primary d-inline float-end">Toggle Details</button> <br>
+
+
+        <div *ngIf='quote.showDetails'><br>
+          <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)' (quotes)="up(i)"
+            (quotesdown)="down(i)"></app-quote-detail>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="col-md-12 ">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
+
+
+</div>
+<div class="container">
+  <div class="footer row">
+
+    <div class="col-md-6">
+      <li>
+        copyright &copy; 2021 cafe|Allrights Reserved|Theme Desighned by Silvano
+      </li>
+    </div>
+    <div class="col-md-6 footer">
+      <ul id="inner">
+        <li><i class="fa fa-facebook-square icon" aria-hidden="true"></i>
+        </li>
+        <li>
+          <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </li>
+        <li>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </li>
+        <li>
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </li>
+        <li>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
