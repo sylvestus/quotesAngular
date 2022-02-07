@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p> Author: {{quote.details}} </p>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      This quote was posted  {{quote.createdDate|dateCount}}   ago
+    </div>
+    <div class="col-md-6">
+      <p>posted by: {{quote.Uname}}</p>
+    </div>
+  </div>
+  <div class="row">
+    
+    <div class="col-md-6 ">
+      <i class="fa fa-thumbs-up" aria-hidden="true" (click)="upvote(index)"></i>
+
+      <span> {{ quote.upvote }}</span>
+      <i class="fa fa-thumbs-down" aria-hidden="true " (click)="downvote(index)"></i>
+      <span> {{ quote.downvote}}</span>
+    </div>
+    <div class="col-md-6">
+      <button (click)='quoteDelete(true)' class="btn btn-outline-danger d-inline float-end">Delete quote</button>
+      <br>
+    </div>
+  </div>
+</div>
