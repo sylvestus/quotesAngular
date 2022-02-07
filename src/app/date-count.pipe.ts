@@ -27,7 +27,7 @@ transform(value: any, _args?: any): any {
   if (counter > 0)
   if (counter === 1) {
   return counter + ' ' + i + ' ago'; 
-  return counter + ' ' + i + 's ago'; 
+  
   }
   }
   }

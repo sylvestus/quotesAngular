@@ -7,7 +7,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'yes we can', 'barack obama','silvano',0,0,new Date(2021,3,14)),
+    new Quote(1,'Yes we can','Barack Obama','silvano',0,0,new Date(2020,3,14)),
     new Quote(2,'No human is limited','eliud kipchoge','silvano',0,0,new Date(2020,3,14)),
     new Quote(3,'That which does not kill us makes us stronger.','Friedrich Nietzsche','silvano',0,0,new Date(2020,3,14)),
     new Quote(4,'Life is what happens when you’re busy making other plans','John Lennon','silvano',0,0,new Date(2020,3,14)),
